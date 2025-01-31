@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.GUI.AjouterMedecinController"
+            prefHeight="600" prefWidth="800"
+            style="-fx-background-color: white;">
+
+    <VBox spacing="20" alignment="CENTER" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+
+        <!-- Title -->
+        <Text text="Ajouter un Médecin"
+              style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+        <!-- Form Container -->
+        <GridPane hgap="20" vgap="15">
+            <padding>
+                <Insets top="20" bottom="20"/>
+            </padding>
+
+            <!-- Nom -->
+            <Label text="Nom:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"
+                   style="-fx-font-weight: bold;"/>
+            <TextField fx:id="nomMedecinTf"
+                       GridPane.columnIndex="1" GridPane.rowIndex="0"
+                       prefWidth="300" promptText="Entrez le nom"/>
+
+            <!-- Specialité -->
+            <Label text="Spécialité:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1"
+                   style="-fx-font-weight: bold;"/>
+            <TextField fx:id="specialiteTf"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"
+                       prefWidth="300" promptText="Entrez la spécialité"/>
+
+            <!-- Téléphone -->
+            <Label text="Téléphone:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="2"
+                   style="-fx-font-weight: bold;"/>
+            <TextField fx:id="telephoneTf"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"
+                       prefWidth="300" promptText="Entrez le numéro de téléphone"/>
+
+            <!-- Email -->
+            <Label text="Email:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="3"
+                   style="-fx-font-weight: bold;"/>
+            <TextField fx:id="emailTf"
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"
+                       prefWidth="300" promptText="Entrez l'adresse email"/>
+
+            <!-- Button Container -->
+            <HBox spacing="10" alignment="CENTER_RIGHT"
+                  GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <Button text="Enregistrer"
+                        onAction="#enregistrer"
+                        style="-fx-background-color: #006D77; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="120" prefHeight="30"/>
+
+                <Button text="Annuler"
+                        style="-fx-background-color: #E29578; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="120" prefHeight="30"/>
+            </HBox>
+        </GridPane>
+    </VBox>
+</AnchorPane>

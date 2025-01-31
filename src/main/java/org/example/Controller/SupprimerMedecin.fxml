@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.GUI.SupprimerMedecinController"
+            style="-fx-background-color: #FFFFFF;">
+
+    <HBox AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+        <!-- Left Sidebar -->
+        <VBox style="-fx-background-color: #05696B; -fx-padding: 20;" prefWidth="200">
+            <Label text="Gestion Clinique"
+                   style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+            <!-- Menu Items -->
+            <VBox spacing="10" style="-fx-padding: 20 0;">
+                <Button text="Gérer Médecins"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT;"/>
+                <Button text="Gérer Patients"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT;"/>
+                <Button text="Gérer Rendez-vous"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT;"/>
+                <Button text="Gérer Departement"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-alignment: CENTER-LEFT;"/>
+            </VBox>
+        </VBox>
+
+        <!-- Main Content -->
+        <VBox style="-fx-padding: 30;" HBox.hgrow="ALWAYS">
+            <Text text="Supprimer un Médecin"
+                  style="-fx-font-size: 24px; -fx-fill: #05696B; -fx-font-weight: bold;"/>
+
+            <VBox spacing="20" style="-fx-padding: 30 0;">
+                <!-- Search Section -->
+                <HBox spacing="20" alignment="CENTER_LEFT">
+                    <TextField fx:id="searchField" promptText="Rechercher un médecin..."
+                               style="-fx-pref-width: 300; -fx-background-color: #FFFFFF; -fx-border-color: #05696B;"/>
+                    <Button text="Rechercher"
+                            style="-fx-background-color: #05696B; -fx-text-fill: white;"/>
+                </HBox>
+
+                <!-- TableView for doctors -->
+                <TableView fx:id="medecinTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                        <TableColumn fx:id="nomColumn" text="Nom" prefWidth="100"/>
+                        <TableColumn fx:id="prenomColumn" text="Prénom" prefWidth="100"/>
+                        <TableColumn fx:id="ageColumn" text="Age" prefWidth="50"/>
+                        <TableColumn fx:id="genreColumn" text="Genre" prefWidth="80"/>
+                        <TableColumn fx:id="emailColumn" text="Email" prefWidth="150"/>
+                        <TableColumn fx:id="telephoneColumn" text="Téléphone" prefWidth="100"/>
+                        <TableColumn fx:id="regionColumn" text="Région" prefWidth="100"/>
+                    </columns>
+                </TableView>
+
+                <!-- Buttons Section -->
+                <HBox spacing="20" alignment="CENTER">
+                    <Button fx:id="deleteButton" text="Supprimer"
+                            style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 150; -fx-pref-height: 40;"
+                            onAction="#supprimerMedecin"/>
+                    <Button fx:id="cancelButton" text="Annuler"
+                            style="-fx-background-color: #95A5A6; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 150; -fx-pref-height: 40;"
+                            onAction="#annuler"/>
+                </HBox>
+
+                <!-- Status message -->
+                <Label fx:id="statusLabel"
+                       style="-fx-text-fill: #05696B; -fx-font-size: 14px; -fx-alignment: CENTER;"/>
+            </VBox>
+        </VBox>
+    </HBox>
+</AnchorPane>
