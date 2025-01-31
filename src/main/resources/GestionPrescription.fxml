@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controllers.PrescriptionController"
+            prefHeight="600.0" prefWidth="800.0">
+    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+
+        <!-- Title -->
+        <Text styleClass="title-text" text="Gestion des Prescriptions"/>
+
+        <!-- Form Section -->
+        <GridPane hgap="10" vgap="10">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+            <Label text="Patient:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <ComboBox fx:id="patientComboBox" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Médecin:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <ComboBox fx:id="doctorComboBox" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Date Prescription:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <DatePicker fx:id="prescriptionDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Date Expiration:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <DatePicker fx:id="expiryDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <Label text="Médicaments:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <TextArea fx:id="medicationsTextArea" prefRowCount="2" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+            <Label text="Dosage:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <TextField fx:id="dosageTextField" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+            <Label text="Fréquence:" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <TextField fx:id="frequencyTextField" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+            <Label text="Instructions:" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <TextArea fx:id="instructionsTextArea" prefRowCount="2" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+        </GridPane>
+
+        <!-- Buttons Section -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Button fx:id="addButton" text="Ajouter" onAction="#handleAdd"/>
+            <Button fx:id="updateButton" text="Modifier" onAction="#handleUpdate"/>
+            <Button fx:id="deleteButton" text="Supprimer" onAction="#handleDelete"/>
+            <Button fx:id="clearButton" text="Effacer" onAction="#handleClear"/>
+        </HBox>
+
+        <!-- Table View -->
+        <TableView fx:id="prescriptionTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="patientColumn" text="Patient" prefWidth="100"/>
+                <TableColumn fx:id="doctorColumn" text="Médecin" prefWidth="100"/>
+                <TableColumn fx:id="dateColumn" text="Date" prefWidth="100"/>
+                <TableColumn fx:id="medicationsColumn" text="Médicaments" prefWidth="150"/>
+                <TableColumn fx:id="dosageColumn" text="Dosage" prefWidth="100"/>
+                <TableColumn fx:id="statusColumn" text="Status" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>
