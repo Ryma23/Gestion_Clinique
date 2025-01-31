@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.mediconnect.HelloController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="440.0" prefWidth="714.0">
+            <children>
+                <AnchorPane layoutX="-1.0" prefHeight="407.0" prefWidth="395.0" styleClass="left-form" stylesheets="@../../../css/loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <AnchorPane layoutX="393.0" prefHeight="407.0" prefWidth="383.0" styleClass="right-form" stylesheets="@../../../css/loginDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label layoutX="47.0" layoutY="107.0" text="Bienvenu dans ">
+                            <font>
+                                <Font name="Tahoma Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="username" layoutX="62.0" layoutY="204.0" prefHeight="30.0" prefWidth="243.0" promptText="Email" styleClass="textfield" stylesheets="@../../../css/loginDesign.css" />
+                        <PasswordField fx:id="password" layoutX="63.0" layoutY="244.0" prefHeight="30.0" prefWidth="243.0" promptText="Password" styleClass="textfield" stylesheets="@../../../css/loginDesign.css" />
+                        <Button fx:id="loginBtn" layoutX="65.0" layoutY="295.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="243.0" styleClass="login-btn" stylesheets="@../../../css/loginDesign.css" text="Login" />
+                        <Label layoutX="192.0" layoutY="107.0" text="MediConnect" textFill="#05696b">
+                            <font>
+                                <Font name="Tahoma Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="loginBtn2" layoutX="62.0" layoutY="146.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0" styleClass="login-btn" stylesheets="@../../../css/loginDesign.css" text="Admin" />
+                        <Button fx:id="loginBtn21" layoutX="144.0" layoutY="146.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0" styleClass="login-btn" stylesheets="@../../../css/loginDesign.css" text="Patient" />
+                        <Button fx:id="loginBtn22" layoutX="227.0" layoutY="146.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0" styleClass="login-btn" stylesheets="@../../../css/loginDesign.css" text="Medecin" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
