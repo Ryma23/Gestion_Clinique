@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.LoginControllers"
+            prefWidth="400" prefHeight="500"
+            style="-fx-background-color: linear-gradient(to bottom, #2c3e50, #4ca1af);">
+
+    <!-- Carte blanche contenant le formulaire -->
+    <VBox layoutX="50.0" layoutY="80.0"
+          spacing="15"
+          alignment="CENTER"
+          style="-fx-background-color: white; -fx-padding: 25px; -fx-background-radius: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);">
+
+
+        <Label text="Connexion" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+
+        <TextField fx:id="usernameField" promptText="Nom d'utilisateur"
+                   style="-fx-pref-width: 250px; -fx-padding: 8px; -fx-background-radius: 5px;"/>
+
+        <PasswordField fx:id="passwordField" promptText="Mot de passe"
+                       style="-fx-pref-width: 250px; -fx-padding: 8px; -fx-background-radius: 5px;"/>
+
+        <!-- Zone pour afficher les erreurs -->
+        <Label fx:id="errorLabel" text="" style="-fx-text-fill: red; -fx-font-size: 12px;" />
+
+        <!-- Bouton de connexion -->
+        <Button fx:id="loginButton" text="Se connecter"
+                style="-fx-background-color: #4ca1af; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-background-radius: 5px;"/>
+
+    </VBox>
+</AnchorPane>

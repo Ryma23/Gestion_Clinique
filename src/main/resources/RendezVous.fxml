@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.RendezVousControllers" style="-fx-background-color: #9ce9f4;">
+
+    <!-- En-tête -->
+    <top>
+        <Label text="MediConnect - Gestion des Rendez-vous"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-alignment: center; -fx-padding: 10px;-fx-text-fill: #00796b;" />
+    </top>
+
+    <!-- Contenu Principal -->
+    <center>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20px; -fx-background-color: #f7f7f7; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+            <TextField fx:id="nomField" promptText="Nom du patient" style="-fx-font-size: 14px; -fx-padding: 10px;"/>
+            <TextField fx:id="prenomField" promptText="Prénom du patient" style="-fx-font-size: 14px; -fx-padding: 10px;"/>
+            <DatePicker fx:id="datePicker" style="-fx-font-size: 14px; -fx-padding: 10px;"/>
+            <TextField fx:id="heureField" promptText="Heure du rendez-vous (HH:mm)" style="-fx-font-size: 14px; -fx-padding: 10px;"/>
+            <TextField fx:id="statusField" promptText="Statut du rendez-vous" style="-fx-font-size: 14px; -fx-padding: 10px;"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="ajouterButton" text="Ajouter" onAction="#ajouterRendezVous" style="-fx-background-color: #4ca3af; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 150px; -fx-min-height: 50px;"/>
+                <Button fx:id="modifierButton" text="Modifier" onAction="#modifierRendezVous" style="-fx-background-color: #05696B; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 150px; -fx-min-height: 50px;"/>
+                <Button fx:id="supprimerButton" text="Supprimer" onAction="#supprimerRendezVous" style="-fx-background-color: #293881; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 150px; -fx-min-height: 50px;"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Tableau des rendez-vous -->
+    <bottom>
+        <TableView fx:id="tableView" style="-fx-background-color: #fff; -fx-border-radius: 10px; -fx-padding: 10px;">
+            <columns>
+                <TableColumn text="Nom" fx:id="colNom" prefWidth="100"/>
+                <TableColumn text="Prénom" fx:id="colPrenom" prefWidth="100"/>
+                <TableColumn text="Date" fx:id="colDate" prefWidth="150"/>
+                <TableColumn text="Heure" fx:id="colHeure" prefWidth="100"/>
+                <TableColumn text="Statut" fx:id="colStatus" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </bottom>
+</BorderPane>
