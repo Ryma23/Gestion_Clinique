@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.gestion_clinique.Controller.PatientController">
+    <VBox spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20"
+          AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20">
+        <TextField promptText="Nom du patient" fx:id="nomPatientField" />
+        <TextField promptText="Prénom du patient" fx:id="prenomPatientField" />
+        <HBox>
+            <TextField promptText="Heure du rendez-vous (HH:mm)" fx:id="heureRendezVousField" />
+            <Button text="Sélectionner" />
+        </HBox>
+        <TextField promptText="Statut du rendez-vous" fx:id="statutRendezVousField" />
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Ajouter" fx:id="ajouterButton" onAction="#handleAddPatient"
+                    styleClass="add-button" />
+            <Button text="Modifier" fx:id="modifierButton" onAction="#handleModifyPatient"
+                    styleClass="edit-button" />
+            <Button text="Supprimer" fx:id="supprimerButton" onAction="#handleDeletePatient"
+                    styleClass="delete-button" />
+        </HBox>
+        <HBox alignment="CENTER">
+            <Button fx:id="suivantButton" text="Suivant" onAction="#handleAddPatient"
+                    style="-fx-background-color: #006D77; -fx-text-fill: white; -fx-min-width: 150; -fx-min-height: 40;"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

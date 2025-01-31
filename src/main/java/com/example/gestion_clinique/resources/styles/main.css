@@ -1,0 +1,230 @@
+
+.side-menu {
+    -fx-background-color: #006D77;
+    -fx-padding: 20px 10px;
+    -fx-pref-width: 250px;
+    -fx-spacing: 10px;
+}
+
+.menu-header {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20px 0;
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+    -fx-min-width: 230px;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: #005c66;
+}
+
+.submenu {
+    -fx-padding: 0 0 0 20px;
+}
+
+.submenu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-alignment: center-left;
+    -fx-padding: 5px 10px;
+    -fx-min-width: 200px;
+    -fx-cursor: hand;
+}
+
+.submenu-button:hover {
+    -fx-background-color: #005c66;
+}
+
+/* Content area styling */
+.content-area {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+}
+
+/* Form styling */
+.text-field, .password-field, .combo-box {
+    -fx-pref-height: 35px;
+    -fx-background-radius: 5px;
+}
+
+.button {
+    -fx-background-color: #006D77;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+.button:hover {
+    -fx-background-color: #005c66;
+}
+
+/* Table styling */
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #006D77;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Action buttons in table */
+.action-button {
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-background-color: transparent;
+}
+
+.edit-button {
+    -fx-graphic: url('edit.png');
+}
+
+.delete-button {
+    -fx-graphic: url('delete.png');
+}
+
+/* styles.css - Additional styles for specific components */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #006D77;
+    -fx-padding: 0 0 20px 0;
+}
+
+.form-container {
+    -fx-spacing: 15;
+    -fx-padding: 20px;
+}
+
+.form-field {
+    -fx-spacing: 5;
+}
+
+.form-label {
+    -fx-font-weight: bold;
+}
+
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+}
+
+.success-message {
+    -fx-text-fill: #28a745;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.radio-button {
+    -fx-text-fill: #333333;
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: #006D77;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #006D77;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #006D77;
+    -fx-border-width: 2px;
+}
+
+/* Search bar styling */
+.search-box {
+    -fx-spacing: 10;
+    -fx-padding: 10px;
+}
+
+.search-field {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 35px;
+    -fx-background-radius: 20px;
+    -fx-padding: 0 15px;
+}
+
+/* Alert dialog styling */
+.dialog-pane {
+    -fx-background-color: white;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: #006D77;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #006D77;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #005c66;
+}
+.header-button {
+    -fx-background-color: #0078D4;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px;
+    -fx-alignment: center-left;
+    -fx-min-width: 250px;
+    -fx-cursor: default;
+}
+
+.side-menu {
+    -fx-background-color: #f0f0f0;
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+}
+
+.menu-button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.submenu {
+    -fx-background-color: #f8f8f8;
+}
+
+.submenu-button {
+    -fx-padding: 10px 10px 10px 30px;
+}

@@ -1,0 +1,110 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.PatientController"
+            stylesheets="@styles.css">
+    <VBox spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20"
+          AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20">
+
+        <GridPane hgap="30" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="200"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="200"/>
+            </columnConstraints>
+
+            <!-- Left Column -->
+            <VBox spacing="15" GridPane.columnIndex="0">
+                <Label text="Nom"/>
+                <TextField fx:id="lastNameField" promptText="Type here"/>
+
+                <Label text="Age"/>
+                <TextField fx:id="ageField" promptText="Type here"/>
+
+                <Label text="Adresse"/>
+                <TextField fx:id="addressField" promptText="Type here"/>
+
+                <Label text="Region"/>
+                <ComboBox fx:id="regionComboBox" promptText="Select region" maxWidth="Infinity">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Tunis"/>
+                            <String fx:value="Mahdia"/>
+                            <String fx:value="Bizerte"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <Label text="Numéro de Sécurité Social"/>
+                <TextField fx:id="numeroSecSocialeField" promptText="Type here"/>
+            </VBox>
+
+            <!-- Right Column -->
+            <VBox spacing="15" GridPane.columnIndex="1">
+                <Label text="Prénom"/>
+                <TextField fx:id="firstNameField" promptText="Type here"/>
+
+                <Label text="Genre"/>
+                <HBox spacing="20">
+                    <RadioButton fx:id="hommeRadio" text="Homme">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="genreGroup"/>
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="femmeRadio" text="Femme" toggleGroup="$genreGroup"/>
+                </HBox>
+
+                <Label text="État civil"/>
+                <HBox spacing="20">
+                    <RadioButton fx:id="marieRadio" text="Marié(e)">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="etatCivilGroup"/>
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton fx:id="celibataireRadio" text="Célibataire" toggleGroup="$etatCivilGroup"/>
+                </HBox>
+
+                <Label text="Adresse E-mail"/>
+                <TextField fx:id="emailField" promptText="Type here"/>
+
+                <Label text="Numéro de téléphone"/>
+                <TextField fx:id="phoneNumberField" promptText="Type here"/>
+
+                <Label text="Assurance santé"/>
+                <TextField fx:id="assuranceField" promptText="Type here"/>
+            </VBox>
+        </GridPane>
+
+        <HBox alignment="CENTER">
+            <Button fx:id="suivantButton" text="Suivant" styleClass="suivant-button"
+                    onAction="#handleAddPatient"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
+
+        <!-- listPatients.fxml -->
+        <?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PatientController"
+      stylesheets="@styles.css">
+
+<TableView fx:id="patientTable" VBox.vgrow="ALWAYS">
+    <columns>
+        <TableColumn fx:id="nomCol" text="Nom"/>
+        <TableColumn fx:id="prenomCol" text="Prénom"/>
+        <TableColumn fx:id="ageCol" text="Age"/>
+        <TableColumn fx:id="emailCol" text="Email"/>
+        <TableColumn fx:id="phoneCol" text="Téléphone"/>
+        <TableColumn fx:id="regionCol" text="Region"/>
+        <TableColumn fx:id="actionsCol" text="Actions"/>
+    </columns>
+</TableView>
+</VBox>
+
